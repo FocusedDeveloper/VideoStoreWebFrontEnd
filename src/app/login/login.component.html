@@ -1,0 +1,13 @@
+<small *ngIf='invalidLogin'>{{errorMessage}} </small>
+<div>
+<a routerLink="/signup">Sign Up</a>
+</div>
+<br>
+<br>
+<div>
+UserName : <input type ="text" name="username" [(ngModel)]="username">
+Password : <input type ="password" name="password" [(ngModel)]="password">
+<button (click)=handleLogin()>Login</button>
+<br>
+
+</div>

@@ -1,0 +1,31 @@
+<!--
+<h3>
+        <img src = "http://image.tmdb.org/t/p/w92{{movie.urlThumbnail}}"> 
+        <br>
+       {{movie.title}} 
+        <br>
+        <button (click)="onViewDetails(movie)">View Details</button>
+        <br>
+        <button (click)="onAddMovie(movie)">Add To Shop</button> 
+    </h3>
+
+<div *ngIf="movie.detailsActive; else showCard">
+    <app-moviedetailsview [movie]="movie"  ></app-moviedetailsview>
+</div>
+<ng-template #showCard>
+    -->
+    <div class="movie-card">
+        <div class="cover">
+            <img src = "http://image.tmdb.org/t/p/w185{{movie.urlThumbnail}}"> 
+        
+        </div>
+        <h4 class="title"> {{movie.title}} </h4>
+        
+        <div class="container">
+            <button class="action" (click)="onViewDetails(movie)">View Details</button>
+            <br>
+            <button class="action" (click)="onAddMovie(movie)">Add To Shop</button> 
+        </div>
+    </div>
+<!--
+</ng-template> -->

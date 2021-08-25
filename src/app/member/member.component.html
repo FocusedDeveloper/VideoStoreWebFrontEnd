@@ -1,0 +1,28 @@
+<p>Welcome {{name}}</p>
+<div >
+    <div #detailsView id="detailsView">
+        <div *ngIf="detailsActive">
+            <app-moviedetailsview [movie]="selectedMovie" (detailsLoadedEvent)="detailsLoaded($event)" (closeDetailsEvent)="closeDetails()"></app-moviedetailsview>
+        </div>
+    </div>
+    <div>
+        <div >
+            <mat-divider></mat-divider>
+            <H4>Your Current Rentals</H4>
+            <div class="movie-list">
+                <app-movieitemmemeberview  (updateStockEvent)="updateMovieList()" (detailsSelectedEvent)="detailsSelected($event)" *ngFor="let movie of rentedMovies$" [movie]="movie" class="movieblock">
+            
+                </app-movieitemmemeberview>
+            </div>
+        </div>
+        <div >
+            <mat-divider></mat-divider>
+            <H4>Available for Rent</H4>
+            <div class="movie-list">
+                <app-movieitemmemeberview  (updateStockEvent)="updateMovieList()" (detailsSelectedEvent)="detailsSelected($event)" *ngFor="let movie of availableMovies$" [movie]="movie" class="movieblock">
+                
+                </app-movieitemmemeberview>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+<div>
+      <!--  Integer[] cast, String rated, String dateReleasedBefore, String dateReleasedAfter, Integer page, String sort ) -->
+
+      <button (click)="resetSearch()">Reset Search</button>
+      <div *ngFor="let genre of genreArray; index as i" >
+          <input type="checkbox"  #genreCheckbox (change)="onGenreChange(i,genreCheckbox.checked)" >{{genre.id}} {{genre.name}}<br>
+      </div>
+
+      <div>
+          <input [disabled]="isCastFull" #userCastString type="text">
+          <button [disabled]="isCastFull" (click)="onCastInput(userCastString.value)">Search by Actor</button>
+          <div *ngFor="let cast of castOptions; index as i">
+              {{cast.id}} {{cast.department}}
+               <br>
+            <button (click)="onCastSelected(cast.id)">Add: {{cast.name}}</button>
+          </div>
+          <form action="">
+             <label>Released Before  </label>
+             <input type="date" #beforeDate /><input (click)="beforeDateChanged(beforeDate.value)" type="submit">
+          </form>
+          <form action="">
+                <label>Released After  </label>
+                <input type="date" #afterDate /><input (click)="afterDateChanged(afterDate.value)" type="submit">
+            </form>
+            <input type="checkbox" #filterRating (change)="toggleRating(filterRating.checked)"> Toggle Rating Filter
+            <div *ngIf="ratingsFilterVar">
+                <div *ngFor="let rating of ratingArray">
+                    <input type="radio" name="rName" value="{{rating}}" #ratingRadio (change)="onRatingChange(rating, ratingRadio.checked)">{{rating}}
+                </div>
+            </div>
+      </div>
+</div>

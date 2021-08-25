@@ -1,0 +1,10 @@
+<div>
+    <H2>New Movies</H2>
+    
+    <div class="movie-list">
+        <app-newmoviequerymenu (queryChangeEvent)="fetchNewMovies($event)"></app-newmoviequerymenu>
+        <app-newmovieitem (movieAddedEvent)="updatedMovieList()" (detailsSelectedEvent)="detailsSelected($event)" *ngFor="let movie of movies$" [movie]="movie" class="movieblock">
+
+        </app-newmovieitem>
+    </div>
+</div>

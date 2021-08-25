@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EAyCE",
+    "sources": [
+        "moviedetailsview.component.scss"
+    ],
+    "names": [],
+    "file": "moviedetailsview.component.css"
+}

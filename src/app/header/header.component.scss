@@ -1,0 +1,53 @@
+.logo {
+    background-color: green;
+    color: indigo;
+}
+
+.header2 {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.nav-button-row button,
+.nav-button-row a {
+    margin-right: 4px;
+  }
+
+.fill-remaining-space {
+    /* This fills the remaining space, by using flexbox. 
+       Every toolbar row uses a flexbox row layout. */
+    flex: 1 1 auto;
+  }
+
+  .vectro {
+    position: relative;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0.1px #f1f1f1;
+    font-family: 'Righteous', cursive;
+    font-size: 40px;
+    //margin: 150px 0 50px 0;
+  }
+  
+  .vectro:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /*-webkit-animation:vectro_effect 0.067s infinite;*/
+    background: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, rgba(255,255,255,0) 1px, rgba(255,255,255,0) 2px);
+  }
+  
+  
+  
+  .windows .vectro {
+    -webkit-text-stroke: 4px #f1f1f1;
+  }
+  
+  .vectro-body {
+    -webkit-background-clip: text;
+    background-image: -webkit-linear-gradient(#C3BFB4 0%, #FDFCFA 50%, #E8E7E5 51%, #757172 52%, #E8E9DB 100%);
+    -webkit-filter: drop-shadow(2px 2px 15px #3F59F4);
+  }

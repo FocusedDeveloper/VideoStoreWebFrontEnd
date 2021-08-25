@@ -1,0 +1,26 @@
+<div class="movie-card">
+        <div class="cover">
+         <img src = "http://image.tmdb.org/t/p/w185{{movie.urlThumbnail}}"> 
+       
+        </div>
+        <h4 class="title"> {{movie.title}} </h4>
+    
+    <div class="container">
+        <button class="action" (click)="onViewDetails(movie)">View Details</button>
+        <br>
+        <ng-container *ngIf="movie.currentlyRentedbyMember; then rented; else notRented">
+        </ng-container>
+        <ng-template #rented>
+                <button class="action" (click)="returnMovie(movie)">Return Movie</button>
+        </ng-template>
+        <ng-template #notRented>
+                <div *ngIf="movie.stock; else notInStock">
+                        <button class="action" (click)="rentMovie(movie)">Rent</button>
+                </div>
+                <ng-template #notInStock>
+                        <p>Out of Stock.</p>
+                </ng-template>    
+        </ng-template>
+    </div>
+    
+</div>

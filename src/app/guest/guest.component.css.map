@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "guest.component.sass"
+    ],
+    "names": [],
+    "file": "guest.component.css"
+}

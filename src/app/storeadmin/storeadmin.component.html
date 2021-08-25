@@ -1,0 +1,13 @@
+<div #detailsView id="detailsView">
+    <div *ngIf="detailsActive">
+        <app-moviedetailsview [movie]="selectedMovie" (detailsLoadedEvent)="detailsLoaded($event)" (closeDetailsEvent)="closeDetails()"></app-moviedetailsview>
+    </div>
+</div>
+
+<div class="movie-list">
+    <app-movieitem (copiesAddedEvent)="updateMovieList()" (detailsSelectedEvent)="detailsSelected($event)" *ngFor="let movie of movies$" [movie]="movie" class="movieblock"></app-movieitem>
+</div>
+
+<div>
+    <app-newmovies (movieAddedEvent)="updateMovieList()" (detailsSelectedEvent)="detailsSelected($event)" ></app-newmovies>
+</div>

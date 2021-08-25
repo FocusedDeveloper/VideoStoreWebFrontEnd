@@ -1,0 +1,44 @@
+<div class="movie-details">
+    <div class="info_section">
+      <div class="movie_header">
+        <img class="locandina" src="http://image.tmdb.org/t/p/w185{{movie.urlThumbnail}}"/>
+        <h1>{{movie.title}}</h1>
+        <h4>{{movie.releaseDate}}</h4>
+        <span class="minutes">{{movie.rating}}</span>
+        <!-- p class="type">Action, Crime, Fantasy</p -->
+        
+      </div>
+      <button mat-raised-button  (click)="closeDetails()">Close Details</button>
+      <div class="movie_desc">
+        <p class="text">
+            {{movie.plot}}
+        </p>
+      </div>
+      <!--div class="movie_social">
+        <ul>
+          <li><i class="material-icons">share</i></li>
+          <li><i class="material-icons"></i></li>
+          <li><i class="material-icons">chat_bubble</i></li>
+        </ul>
+      </div -->
+    </div>
+    <div class="blur_back" [ngStyle]="{background: 'url(http://image.tmdb.org/t/p/w780' + movie.backdrop + ')'}"></div>
+</div>
+
+
+<!--div class="movie-details">
+    <div class="backdrop">
+        <img src = "http://image.tmdb.org/t/p/w780{{movie.backdrop}}"> 
+   
+    </div>
+    <div class="container">
+        <div class="movie-stats">
+            <H3 class="title">{{movie.title}}</H3>
+            <H5 class="title">Release Date: {{movie.releaseDate}}</H5>
+            <H5 class="title">Rating: {{movie.rating}}</H5>
+            <li><p class="info">{{movie.plot}}</p></li>
+        </div>
+        <button class="action" (click)="closeDetails()">Close Details</button>
+    </div>
+
+</div -->

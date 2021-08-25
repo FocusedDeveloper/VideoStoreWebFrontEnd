@@ -1,0 +1,33 @@
+<!--
+<h3>
+    <img src = "http://image.tmdb.org/t/p/w92{{movie.urlThumbnail}}"> 
+    <br>
+   {{movie.id}} - {{movie.title}} - {{movie.stock}} - {{movie.rentedOut}} - {{movie.totalTimesRented}}
+    <br>
+    <button class="action" (click)="onAddCopies(movie,copies.value)">Buy More Copies</button><input #copies type="number" value=10 min="5" max="30">
+</h3>
+-->
+
+<div class="movie-card">
+    <div class="cover">
+        <img src = "http://image.tmdb.org/t/p/w185{{movie.urlThumbnail}}"> 
+   
+    </div>
+    <h4 class="title"> {{movie.title}} </h4>
+    <div class="movie-stats">
+        <li>ID#: {{movie.id}}</li>
+        <li>Stock Count: {{movie.stock}}</li> 
+        <li>Rented Out: {{movie.rentedOut}}</li> 
+        <li>Total Rented Count: {{movie.totalTimesRented}}</li>
+    </div>
+    
+    <div class="container">
+        <button class="action" (click)="onViewDetails(movie)">View Details</button>
+        <button class="action" (click)="onAddCopies(movie,copies.value)">Purchase Additional Stock</button>
+        <div class="action">
+            Enter Quantity: 
+            <input #copies type="number" value=10 min="5" max="30">
+        </div>
+    </div>
+
+</div>

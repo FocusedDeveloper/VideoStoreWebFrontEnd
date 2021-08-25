@@ -1,0 +1,25 @@
+
+<h1>Sign Up</h1>
+
+
+<form #newUserForm="ngForm" (ngSubmit)="onSubmit()" novalidate >
+
+    <div>
+        <label>Name</label>
+        <input type="text" #name="ngModel" name="name" [(ngModel)]="newUser.userName">
+        <small *ngIf="!name.untouched">Touched</small>
+    </div>
+    <div>
+            <label>Password</label>
+            <input type="password" name="password1" [(ngModel)]="newUser.userPassword">
+    </div>
+    <div>
+            <label>Password Confirm</label>
+            <input type="password" name="password2" [(ngModel)]="password2">
+    </div>
+
+    <div>
+        <button>Submit</button>
+    </div>
+
+</form>

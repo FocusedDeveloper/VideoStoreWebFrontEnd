@@ -1,0 +1,39 @@
+<header class="header">
+    <mat-toolbar color="primary" class="nav-button-row">
+        
+        <!--h1 class="vectro"><span class="vectro-body">VECTRO</span -->
+        <h1 class="vectro"><span class="vectro-body">Video Store</span></h1>
+      
+        <!-- This fills the remaining space of the current row -->
+        <span class="fill-remaining-space"></span>
+        
+      
+        <span *ngIf="loginService.isUserLoggedIn()"><a routerLink="/member"><button mat-raised-button color="accent">Member</button></a></span>
+        <span *ngIf="loginService.isUserLoggedIn()"><a routerLink="/admin"><button mat-raised-button color="accent">Admin</button></a></span>
+        <span *ngIf="!loginService.isUserLoggedIn()"><a routerLink="/login"><button mat-raised-button color="accent">Login</button></a></span>
+        <span *ngIf="loginService.isUserLoggedIn()"><a routerLink="/logout"><button mat-raised-button color="accent">Logout</button></a></span>
+    </mat-toolbar>
+    
+    
+    <mat-toolbar *ngIf="loginService.isUserLoggedIn()" color="accent"><mat-divider [inset]="true"></mat-divider>Welcome {{name}}
+
+    </mat-toolbar>
+    <!--div class="logo">
+        <H1 >Video Store!</H1>
+    </div>
+    <div>
+        <nav class="nav">
+            <div>
+                <ul class="nav-links">
+                    
+                
+                    <li *ngIf="loginService.isUserLoggedIn()" routerLink="/member"><a>Member</a></li>
+                    <li *ngIf="loginService.isUserLoggedIn()" routerLink="/admin"><a>Admin</a></li>   
+                    <li *ngIf="!loginService.isUserLoggedIn()" routerLink="/login"><a>Login</a></li>
+                    <li *ngIf="loginService.isUserLoggedIn()" routerLink="/logout"><a>Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div -->
+</header>
+

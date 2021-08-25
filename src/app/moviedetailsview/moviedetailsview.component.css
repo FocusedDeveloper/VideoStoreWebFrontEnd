@@ -1,0 +1,43 @@
+/*
+.movie-details{
+    max-width: 342px;
+    background-color: rgb(219, 219, 219);
+    box-shadow: 0 4px 8px 0 rgba(179, 178, 178, 0.993), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    .cover {
+        max-width:100%;
+        height:auto;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+    .title{
+        text-align: center;
+        height: 40px;
+        padding-top: 0px;
+        margin-top: 0px;
+       // background-color: darkblue;
+    }
+    .container{
+        width: 100%;
+        display: block;
+        overflow: auto;
+        .action{
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .movie-stats{
+        li{
+            list-style-type: none;
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            border-style: inset;
+            border-width: 1px;
+            width: 90%;
+        }
+    }
+}
+
+*/
+/*# sourceMappingURL=moviedetailsview.component.css.map */

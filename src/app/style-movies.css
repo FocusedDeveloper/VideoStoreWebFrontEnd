@@ -1,0 +1,93 @@
+.movie-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(200px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 1rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  color: #444;
+  padding: 20px;
+}
+
+.movie-card {
+  max-width: 185px;
+  background-color: #dbdbdb;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(179, 178, 178, 0.993), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(179, 178, 178, 0.993), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.movie-card .cover {
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.movie-card .title {
+  text-align: center;
+  height: 15px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.movie-card .container .action {
+  height: 100%;
+  width: 100%;
+}
+
+.movie-card .movie-stats li {
+  list-style-type: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-style: inset;
+  border-width: 1px;
+  width: 90%;
+}
+
+.movie-details {
+  display: -ms-grid;
+  display: grid;
+  grid-template: [row1-start] "top top top top" 95px [row1-end] [row2-start] "center-high center-high center-high center-high" 95px [row2-end] [row3-start] "center-low footer footer" 95px [row3-end] [row4-start] "bottom bottom bottom bottom" 95px [row4-end]/190px 190px 190px 190px;
+  background-color: #dbdbdb;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(179, 178, 178, 0.993), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(179, 178, 178, 0.993), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 20px;
+}
+
+.movie-details .cover {
+  max-width: 100%;
+  height: auto;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.movie-details .title {
+  text-align: center;
+  height: 40px;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.movie-details .container {
+  width: 100%;
+}
+
+.movie-details .container .action {
+  height: 100%;
+  width: 100%;
+}
+
+.movie-details .movie-stats li {
+  list-style-type: none;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-style: inset;
+  border-width: 1px;
+  width: 90%;
+}
+/*# sourceMappingURL=style-movies.css.map */

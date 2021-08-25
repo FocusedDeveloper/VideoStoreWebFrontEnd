@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "movieitem.component.sass"
+    ],
+    "names": [],
+    "file": "movieitem.component.css"
+}

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "newmovies.component.sass"
+    ],
+    "names": [],
+    "file": "newmovies.component.css"
+}
